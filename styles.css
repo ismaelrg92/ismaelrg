@@ -132,11 +132,13 @@ footer {
 .project-item {
     display: block; /* Make entire area clickable */
     overflow: hidden; /* Hide overflow */
+    align: center;
 }
 
 .project-item img {
     width: 80%; /* Responsive images */
     transition: transform 0.3s; /* Smooth transition */
+    align: center;
 }
 
 .project-item:hover img {
