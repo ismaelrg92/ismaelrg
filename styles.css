@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #040404; /* Black background */
+    color: white; /* White text */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    max-width: 1440px; /* Max width for desktop layout */
+    margin: auto; /* Center the container */
+    padding: 0; /* Horizontal padding */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #000; /* Dark background */
+    padding: 10px; /* Padding for header */
+}
+
+nav {
+    margin-top: 10px; /* Space between logo and nav */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #D05532; /* Link color */
+    font-size: 12px; /* Font size */
+    padding: 10px; /* Padding for clickable area */
+    transition: color 0.3s; /* Transition effect */
+}
+
+nav a:hover {
+    color: #111; /* Hover color */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position below parent */
+    background-color: black; /* Dropdown background */
+    min-width: 150px; /* Minimum width */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+nav li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Aligns items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spacing between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* Default text color */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: #800080; /* Change color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Optional: Add some padding for better clickable area */
+nav ul li a {
+    padding: 10px 15px; /* Add padding */
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text alignment */
+    padding: 20px; /* Padding */
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
+}
+
+/* Logo Styles */
+.logo img {
+    width: 128px; /* Fixed width for the logo */
+    filter: invert(1); /* Invert colors */
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    padding: 20px; /* Padding */
+}
+
+/* Text Box */
+.text-box {
+    text-align: left; /* Justify text */
+    line-height: 1.6; /* Line height */
+    color: #f2eee8; /* Text color */
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 20px 0; /* Vertical padding */
+    text-align: left; /* Align title left */
+}
+
+.projects-section h2 {
+    margin-bottom: 20px; /* Space below title */
+    font-size: 20px; /* Font size */
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    gap: 15px; /* Space between project items */
+}
+
+/* Individual Project Item */
+.project-item {
+    display: block; /* Make entire area clickable */
+    overflow: hidden; /* Hide overflow */
+}
+
+.project-item img {
+    width: 100%; /* Responsive images */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.project-item:hover img {
+    transform: scale(1.05); /* Scale on hover */
+}
+
+/* Related Projects */
+.related-projects {
+    margin-top: 20px; /* Space above section */
+    text-align: center; /* Center heading */
+}
+
+.related-projects .projects-grid {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.related-projects .project-item {
+    margin: 0 10px; /* Space between items */
+    width: 100px; /* Fixed width for each item */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* iPad Landscape */
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center header items */
+    }
+}
+
+@media (max-width: 768px) { /* iPad Portrait and smaller */
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: center; /* Center navigation links */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center header items */
+    }
+}
+/* About Section */
+.about-section {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between text and image */
+    padding: 40px 0; /* Vertical padding */
+}
+
+.about-text {
+    flex: 1; /* Take available space */
+    padding-right: 20px; /* Space between text and image */
+}
+
+.about-photo {
+    flex: 1; /* Take available space */
+}
+
+.about-photo img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 0; /* Vertical padding */
+}
+
+.contact-form {
+    display: flex; /* Flexbox for the form */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 15px; /* Space between inputs */
+}
+
+.contact-form label {
+    font-size: 14px; /* Label font size */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 10px;
+    background-color: white; /* Initial background */
+    color: #000; /* Initial text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, height 0.3s; /* Animation */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #800080; /* Change to purple on hover */
+    color: white; /* Change text color for contrast */
+    height: calc(100% + 5px); /* Slight height increase */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) { /* iPad Portrait and smaller */
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+    }
+    
+    .about-text {
+        padding-right: 0; /* Remove right padding */
+    }
+}
